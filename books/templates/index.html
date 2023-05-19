@@ -1,0 +1,49 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}
+    book list
+{% endblock %}
+
+{% block main-content%}
+
+
+<h1 class="text-center mt-5 mb-2"> Welcome to bookstore </h1>
+
+<table class="table w-75 offset-1">
+    <thead>
+        <tr>
+            <td> ID </td>
+            <td> Name </td>
+            <td> Author </td>
+            <td> Description </td>
+            <td> Prices </td>
+            <td> Actions </td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in book_list %}
+        <tr>
+            <td>{{ book.id }} </td>
+            <td>{{ book.name }} </td>
+            <td> {{ book.author }}</td>
+            <td> {{ book.price }} </td>
+            <td> {{ book.description | truncatewords:3 | title }} </td>
+            <td> 
+                <a class="btn btn-success" href="{% url 'books:books-show' book.id %}">show</a>
+                <a class="btn btn-info" href="{% url 'books:books-update' book.id %}">update</a>
+                <a class="btn btn-danger" href="{% url 'books:books-delete' book.id %}">delete</a>
+
+            </td>
+
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}
