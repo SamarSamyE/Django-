@@ -1,0 +1,34 @@
+.input-group{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.input-group input {
+    max-width: 50%;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .input-group input:hover, .input-group input:focus, .input-group input-group:hover .input-group input {
+    outline: none;
+    border-color: #05060f;
+  }
+  
+  .input-group:hover .input-group label, .input-group input:focus {
+    color: #05060fc2;
+  }

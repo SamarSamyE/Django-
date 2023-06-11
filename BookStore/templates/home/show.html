@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<div class="container d-flex flex-column justify-content-between">
+  <div class="row">
+    <div class="col-6">
+      <img src="{% static 'Book.jpg' %}" alt="product image" />
+    </div>
+    <div class="col-6 text-center">
+      <h3 class="my-3">Name: {{book.author_name}}</h3>
+
+      <h3 class="text-danger my-3">Price: {{book.title}}</h3>
+    </div>
+  </div>
+</div>
+{% endblock %}
